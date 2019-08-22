@@ -1,0 +1,30 @@
+a {
+  color: #000;
+  text-decoration: none;
+}
+.global-nav-list a:hover {
+  color: #777;
+}
+h1 {
+  color: #f00;
+}
+.global-nav {
+  width: 200px;
+}
+.global-nav-lists {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+}
+.global-nav-list {
+  border-right: 1px solid #888;
+  font-weight: bold;
+}
+.global-nav-list:last-child {
+  border: none;
+}
+.global-nav-list a {
+  display: block;
+  padding: 6px;
+}

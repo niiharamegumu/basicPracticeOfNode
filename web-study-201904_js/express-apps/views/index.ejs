@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title><%=thisPageData.title %></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <header>
+      <h1><%=thisPageData.title %></h1>
+    </header>
+
+    <nav class="global-nav">
+      <ul class="global-nav-lists">
+        <% for (let data of notThisPageData) { %>
+          <li class="global-nav-list"><a href="<%=data.link.href %>"><%=data.link.text %></a></li>
+        <% } %>
+      </ul>
+    </nav>
+
+    <main>
+      <p><%=thisPageData.content %></p>
+      <% if (thisPageData.key === "form") { %>
+        <form method="" action="">
+          <input type="text" name="">
+          <input type="submit" value="送信">
+        </form>
+      <% } %>
+    </main>
+
+  </body>
+</html>
