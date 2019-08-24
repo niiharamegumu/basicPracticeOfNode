@@ -5,6 +5,8 @@ let ejs = require("ejs");
 let eachPageLinkData = require("./conf/data/pageData");
 
 let app = express();
+let host = 3000;
+
 app.engine("ejs", ejs.renderFile);
 app.use(express.static("public"));
 
@@ -38,8 +40,8 @@ app.get('/form', (req,res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server Start");
+app.listen(host, () => {
+  console.log(`Server Start ${host}`);
 });
 
 function getThisPageLinkData (key, eachPageLinkData) {
